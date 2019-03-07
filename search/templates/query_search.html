@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load search_extras %}
+
+{% block content %}
+
+<div class="container" id="order_by_buttons">
+<a href="?relevance=True" type="button" class="btn btn-outline-{% if 'relevance' in request.GET %}success{% else %}secondary{% endif %}">Relevance</a>
+<a href="?most_recent=True" type="button" class="btn btn-outline-{% if 'most_recent' in request.GET %}success{% else %}secondary{% endif %}">Publishing Date: Most Recent</a>
+<a href="?least_recent=True" type="button" class="btn btn-outline-{% if 'least_recent' in request.GET %}success{% else %}secondary{% endif %}">Publishing Date: Least Recent</a>
+<a href="?a-z=True" type="button" class="btn btn-outline-{% if 'a-z' in request.GET %}success{% else %}secondary{% endif %}">A-Z</a>
+</div>
+
+<div id="results-list" class="container">
+	<ul>
+	{% for article in articles %}
+	<li><a href="{% url 'search:article_detail' article.ArticleID %}">{{ article.Title|highlight:search_term }}</a></li>
+	<p class="metainfo"> By {{ article.Author }}, {{ article.Pub_Year }}, {{ article.Journal }} ({{ article.Issue }}) </p>
+	<p> {{ article.Content|highlight:search_term|show_excerpt:search_term }} </p>
+	{% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

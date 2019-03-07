@@ -1,0 +1,99 @@
+/*--------------------------------------------------------------
+1.0 - BASE SITE STYLES
+--------------------------------------------------------------*/
+*,*:after,*:before {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+
+body {
+  background: white;
+  color: black;
+
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;}
+/*--------------------------------------------------------------
+2.0 - SEARCH FORM
+--------------------------------------------------------------*/
+.searchform {
+  background:#f4f4f4;
+  background:rgba(244,244,244,.79);
+  left: 50%;
+  padding: 5px 5px;
+  position: absolute;
+  margin: -22px 0 0 -170px;
+  top: 17%;
+  width:339px;
+
+}
+
+.searchform input, .searchform button {
+  float: left
+}
+.searchform input {
+  background:#fefefe;
+  border: none;
+  font:12px/12px TimesNewRoman;
+  margin-right: 5px;
+  padding: 10px;
+  width: 216px;
+
+}
+  .searchform input:focus {
+    outline: none;
+    box-shadow:0 0 4px #0d76be inset;
+    -moz-box-shadow:0 0 4px #0d76be inset;
+    -webkit-box-shadow:0 0 4px #0d76be inset;
+  }
+  .searchform input::-webkit-input-placeholder {
+    font-style: italic;
+    line-height: 15px
+  }
+
+  .searchform input:-moz-placeholder {
+    font-style: italic;
+    line-height: 15px
+  }
+
+.searchform button {
+  background: #01233F;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34adec', endColorstr='#2691dc',GradientType=0 );
+  border: none;
+  color:white;
+  cursor: pointer;
+  font: 15px/15px TimesNewRoman;
+  padding: 10px;
+  width:106px;
+
+}
+  .searchform button:hover {
+    opacity:.9;
+  }
+
+#results-list {margin-top: 10px;}
+#order_by_buttons {margin-left:145px; margin-top: 80px;}
+#main_page_content {margin-top: 70px;}
+#keyword_in_content {color:red;}
+.highlight {color:red;}
+.metainfo {color: grey; font-size: 13px;}
+.btn-outline-secondary {font-size: 13px; padding: 2px 5px; font: TimesNewRoman; background-color: #01233F; color: white;}
+
+ul {
+  list-style-type: none;
+}
+ li a{color: #01233F; font: 18px/18px TimesNewRoman;
+}

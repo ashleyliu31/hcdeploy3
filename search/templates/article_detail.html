@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div id="main_page_content" class="container"> 
+<div id="title" class="container"> 
+{{ ArticleID.Title }}
+</div>
+<div id="author" class="container"> 
+By {{ ArticleID.Author }}
+</div>
+<div id="pub_date" class="container"> 
+{{ ArticleID.Date }}
+</div>
+<div id="journal" class="container"> 
+{{ ArticleID.Journal }} {{ ArticleID.Issue }}  
+</div>
+<div id="article_content" class="container"> 
+{{ ArticleID.Content }}
+</div>
+</div>
+{% endblock %}
